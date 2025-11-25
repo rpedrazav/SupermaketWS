@@ -1,0 +1,36 @@
+{
+  "name": "supermarketws-scrapers",
+  "version": "1.0.0",
+  "description": "Web scrapers for SupermarketWS price comparison platform",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "scrape:all": "node src/index.js --all",
+    "scrape:jumbo": "node src/index.js --supermarket=jumbo",
+    "scrape:lider": "node src/index.js --supermarket=lider",
+    "scrape:santaisabel": "node src/index.js --supermarket=santaisabel",
+    "scrape:acuenta": "node src/index.js --supermarket=acuenta",
+    "scrape:unimarc": "node src/index.js --supermarket=unimarc",
+    "scrape:mayorista10": "node src/index.js --supermarket=mayorista10",
+    "scrape:cugat": "node src/index.js --supermarket=cugat",
+    "scrape:trebol": "node src/index.js --supermarket=trebol",
+    "scrape:eltit": "node src/index.js --supermarket=eltit"
+  },
+  "keywords": [
+    "scraping",
+    "supermarket",
+    "prices",
+    "temuco"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "playwright": "^1.40.1",
+    "dotenv": "^16.3.1",
+    "pg": "^8.11.3",
+    "uuid": "^9.0.1",
+    "cheerio": "^1.0.0-rc.12",
+    "axios": "^1.6.2"
+  }
+}
