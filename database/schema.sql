@@ -57,9 +57,11 @@ CREATE TABLE prices (
     currency VARCHAR(10) DEFAULT 'CLP',
     is_current BOOLEAN DEFAULT true, -- Solo un precio current por producto
     effective_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    UNIQUE(product_id, is_current) WHERE is_current = true
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+
+-- Crear índice único parcial para is_current
+CREATE UNIQUE INDEX idx_prices_product_current ON prices(product_id) WHERE is_current = true;
 
 -- Tabla de Historial de Precios
 CREATE TABLE price_history (
